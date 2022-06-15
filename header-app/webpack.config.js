@@ -46,15 +46,6 @@ module.exports = (env) => ({
       exposes: {
         "./Header": "./src/bootstrap",
       },
-      shared: {
-        ...deps,
-        react: { singleton: true, eager: true, requiredVersion: deps.react },
-        "react-dom": {
-          singleton: true,
-          eager: true,
-          requiredVersion: deps["react-dom"],
-        },
-      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
